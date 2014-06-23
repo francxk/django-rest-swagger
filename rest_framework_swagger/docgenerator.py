@@ -49,6 +49,7 @@ class DocumentationGenerator(object):
             introspector = APIViewIntrospector(callback, path, pattern)
 
         for method_introspector in introspector:
+            callback.request.method=method_introspector.method
             if not isinstance(method_introspector, BaseMethodIntrospector) or \
                     method_introspector.get_http_method() == "OPTIONS":
                 continue  # No one cares. I impose JSON.
