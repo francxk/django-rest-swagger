@@ -34,7 +34,7 @@ setup(
         'djangorestframework>=2.3.5',
         'PyYAML>=3.10',
     ],
-
+    zip_safe=False,
     url='http://github.com/marcgibbons',
     author='Marc Gibbons',
     author_email='marc_gibbons@rogers.com',
